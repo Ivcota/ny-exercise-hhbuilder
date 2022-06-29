@@ -38,13 +38,13 @@ body {
 }
 
 .button--red {
-  background-color: #a21300;
+  background-color: #d83933;
 }
 
 .button--red:hover {
-  background-color: #801b19;
+  background-color: #b50808;
 }
 
 .button--red:active {
-  background-color: #501717;
+  background-color: #b50808;
 }
