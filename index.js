@@ -45,6 +45,8 @@ class Form {
         input.setAttribute("required", "");
         input.setAttribute("aria-required", "");
       }
+
+      input.classList.add("input");
     });
 
     this.fields.forEach((field, i) => {
@@ -170,8 +172,12 @@ class HouseHold {
     this.element.innerHTML = ``;
     this.people.forEach((person) => {
       const newEl = document.createElement("div");
+      newEl.classList.add("card");
+
+      person.isSmoker && newEl.classList.add("card--smoker");
+
       newEl.innerHTML = `
-        <div style="margin-top: 1rem;" > Relationship: ${person.rel} </div>
+        <div> Relationship: ${person.rel} </div>
         <div> Age: ${person.age}</div>
         <div> Smoker: ${person.isSmoker ? "Yes" : "No"} </div>
         <button id="delete_${
@@ -207,8 +213,9 @@ function initLinkCSS() {
   css.setAttribute("href", "./styles.css");
   head.appendChild(css);
 
-  addButton.classList.add("button");
+  addButton.classList.add(["button"]);
   submitButton.classList.add("button");
+  submitButton.classList.add("button--grey");
 }
 
 function initJS() {
