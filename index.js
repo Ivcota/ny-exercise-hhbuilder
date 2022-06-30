@@ -66,6 +66,12 @@ class Form {
 
     submitButton.addEventListener("click", async (e) => {
       e.preventDefault();
+
+      if (this.houseHold.people.length === 0) {
+        alert("No data found to submit.");
+        return;
+      }
+
       await this.handleSubmit();
       alert("Data stored in pre");
     });
