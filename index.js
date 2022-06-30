@@ -73,7 +73,7 @@ class Form {
       }
 
       await this.handleSubmit();
-      alert("Data stored in pre");
+      alert(`Data stored in pre: ${JSON.stringify(this.houseHold.people)}`);
     });
 
     // END_FEATURES
